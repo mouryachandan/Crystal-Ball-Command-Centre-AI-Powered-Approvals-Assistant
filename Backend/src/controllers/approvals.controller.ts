@@ -34,8 +34,8 @@ export class ApprovalsController {
 
   public getItemById = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const { id } = req.params;
-      const item = this.service.getItemById(id || '');
+      const id = String(req.params.id || '');
+      const item = this.service.getItemById(id);
 
       if (!item) {
         throw new AppError(`Approval item with id "${id}" not found`, 404);
@@ -52,10 +52,10 @@ export class ApprovalsController {
 
   public updateStatus = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
     try {
-      const { id } = req.params;
+      const id = String(req.params.id || '');
       const { status } = req.body as { status: ApprovalStatus };
 
-      const updated = this.service.updateStatus(id || '', status);
+      const updated = this.service.updateStatus(id, status);
 
       if (!updated) {
         throw new AppError(`Approval item with id "${id}" not found`, 404);

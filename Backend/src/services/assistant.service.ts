@@ -16,14 +16,10 @@ import {
 } from '../schemas/assistant.schema';
 import {
   buildSummaryPrompt,
-  SUMMARY_PROMPT_VERSION,
   buildTalkSystemPrompt,
   buildHelpPrompt,
-  HELP_PROMPT_VERSION,
   buildTeachPrompt,
-  TEACH_PROMPT_VERSION,
   buildGreetingPrompt,
-  GREETING_PROMPT_VERSION,
 } from '../prompts';
 import { logger } from '../utils/logger';
 import { SseClient } from '../utils/sse';
