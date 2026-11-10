@@ -1,0 +1,27 @@
+{
+  "name": "crystal-ball-command-centre",
+  "version": "1.0.0",
+  "description": "Crystal Ball Command Centre — Sr. Fullstack Developer (MERN + AI) Wave 2 Take-Home Assignment",
+  "scripts": {
+    "install:all": "npm --prefix Backend install && npm --prefix Frontend install",
+    "dev:backend": "npm --prefix Backend run dev",
+    "dev:frontend": "npm --prefix Frontend run dev",
+    "test:backend": "npm --prefix Backend test",
+    "test:frontend": "npm --prefix Frontend test",
+    "test": "npm run test:backend && npm run test:frontend"
+  },
+  "keywords": [
+    "mern",
+    "ai",
+    "take-home",
+    "nextjs",
+    "express",
+    "typescript",
+    "gpt-4o",
+    "rag",
+    "zod"
+  ],
+  "author": "Crystal Ball Command Centre Candidate",
+  "license": "ISC"
+}
+
